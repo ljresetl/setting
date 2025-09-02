@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smart Assistant</title>
+    <title>Smart Assistant - Settings</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -58,8 +58,8 @@
         </div>
       </aside>
 
-      <!-- Main -->
-      <main class="main">
+      <!-- Main Content -->
+      <main class="content">
         <header class="topbar">
           <div class="topbar-icons">
             <button class="topbar-button">
@@ -83,40 +83,137 @@
           </div>
         </header>
 
-        <section class="content">
-          <h1>AI Assistant</h1>
-          <p class="description">
-            An AI assistant in a time management app helps users plan their day
-            more efficiently: it analyzes tasks, priorities, and deadlines,
-            offering an optimized schedule and reminders. It’s a personal
-            assistant that saves time and reduces the stress of planning.
-          </p>
+<section class="settings">
+  <h2 class="settings-h">Settings</h2>
+  <p class="subtitle">
+    Update personal details, adjust notifications, and choose your
+    language settings
+  </p>
 
-          <div class="cards">
-            <div class="card">
-              <div class="icon">
-                <svg class="social-icon-menu-cards" width="88" height="88">
-                  <use href="./images/icons.svg#icon-iconoir_doc-search"></use>
+  <div class="settings-container">
+    <!-- Ліва колонка -->
+    <div class="left-settings">
+      <h3 class="left-settings-h">General</h3>
+      <div class="form-group-all">
+        <div class="form-group-zone-one">
+          <label class="left-settings-label">Language</label>
+          <select class="form-group-zone">
+            <option>English (Default)</option>
+            <option>Spanish</option>
+            <option>French</option>
+          </select>
+        </div>
+        <div class="form-group-zone-one">
+          <label class="left-settings-label">Timezone</label>
+          <select class="form-group-zone">
+            <option>United States</option>
+            <option>Europe</option>
+            <option>Asia</option>
+          </select>
+        </div>
+        <div class="form-inline">
+          <div class="form-group">
+           <div class="form-group-button-svg">
+              <label class="left-settings-label left-settings-label-one">Date Format</label>
+              <button class="form-group-button">
+                <svg class="form-group-svg" width="20" height="20">
+                  <use href="./images/icons.svg#icon-Info-icon"></use>
                 </svg>
-              </div>
-              <h2>Research.ai</h2>
-              <p>
-                An AI tool for analyzing data, summarizing research, finding
-                insights, and creating reports to speed up decision-making.
-              </p>
-            </div>
-            <div class="card">
-              <div class="icon">
-                <svg class="social-icon-menu-cards" width="88" height="88">
-                  <use href="./images/icons.svg#icon-carbon_chat-bot"></use>
+              </button>
+           </div>
+            <select class="form-group-select">
+              <option>MM/DD/YYYY</option>
+              <option>DD/MM/YYYY</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <div class="form-group-button-svg">
+              <label class="left-settings-label left-settings-label-one">Date Format</label>
+              <button class="form-group-button">
+                <svg class="form-group-svg" width="20" height="20">
+                  <use href="./images/icons.svg#icon-Info-icon"></use>
                 </svg>
-              </div>
-              <h2>ChatBot.ai</h2>
-              <p>
-                An AI assistant for real-time conversations, automating
-                responses, and improving user support.
-              </p>
-            </div>
+              </button>
+           </div><select class="form-group-select">
+              <option>12 Hours</option>
+              <option>24 Hours</option>
+            </select>
+          </div>
+          
+      </div>
+      </div>
+    </div>
+
+    <!-- Права колонка -->
+    <div class="right-settings">
+      <!-- Notification -->
+      <div class="notification-settings">
+        <h3 class="section-title">Notification</h3>
+        <label class="toggle">
+          <input type="checkbox" checked />
+          <span class="slider"></span>
+          <span class="label-text">Timer</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" />
+          <span class="slider"></span>
+          <span class="label-text">Task Update</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" checked />
+          <span class="slider"></span>
+          <span class="label-text">Task Deadline</span>
+        </label>
+      </div>
+
+      <!-- Password -->
+      <div class="password-settings">
+        <h3 class="section-title">Password</h3>
+        <div class="input-group">
+          <svg class="input-icon" width="16" height="16">
+            <use href="./images/icons.svg#icon-lock"></use>
+          </svg>
+          <input type="password" placeholder="Password" />
+        </div>
+        <div class="input-group">
+          <svg class="input-icon" width="16" height="16">
+            <use href="./images/icons.svg#icon-lock"></use>
+          </svg>
+          <input type="password" placeholder="New password" />
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+  <!-- Personal Info на всю ширину -->
+    <div class="personal-info">
+      <h3>Personal info</h3>
+      <div class="form-group">
+        <label>First name</label>
+        <input type="text" value="Oliva" />
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" value="olivia@untitledui.com" />
+      </div>
+      <div class="form-group upload-box">
+        <p>
+          <strong>Click to upload</strong> or drag and drop<br />SVG, PNG,
+          JPG or GIF (max. 800x400px)
+        </p>
+      </div>
+    </div>
+</section>
+
+
+           
+           
+
+          <!-- Buttons -->
+          <div class="buttons">
+            <button class="cancel">Cancel</button>
+            <button class="save">Save Changes</button>
           </div>
         </section>
       </main>
