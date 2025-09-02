@@ -113,7 +113,7 @@ body {
 
 /* Content */
 .content {
-  padding: 30px;
+  padding: 0px 30px 30px 30px;
   flex: 1;
   overflow-y: auto; /* скрол тільки тут */
 }
@@ -135,6 +135,7 @@ body {
   margin: 0 auto;
   /* padding: 30px; */
   font-family: Arial, sans-serif;
+  background-color: transparent;
 }
 
 .settings-h {
@@ -212,6 +213,13 @@ body {
   color: #1f2937;
 }
 
+.highlight {
+  color: #1f2937; /* залишаємо текст чорним */
+  text-decoration: underline;
+  text-decoration-color: #2563eb; /* синя лінія */
+  text-underline-offset: 10px; /* відступ вниз */
+}
+
 .left-settings-label {
   font-weight: 500;
   font-size: 16px;
@@ -265,8 +273,16 @@ body {
   font-size: 22px;
   text-align: center;
   color: #1f2937;
-  margin-bottom: 38px;
+  margin-bottom: 13px;
   text-align: left;
+}
+
+.section-title .highlight {
+  color: #1f2937; /* текст чорний */
+  text-decoration: underline;
+  text-decoration-color: #2563eb; /* синя лінія */
+  text-underline-offset: 10px; /* опустити лінію вниз */
+  text-decoration-thickness: 2px; /* товщина лінії */
 }
 
 .personal-info {
@@ -286,7 +302,7 @@ body {
   display: none;
 }
 
-.slider {
+/* .slider {
   width: 55px;
   height: 30px;
   background-color: #ccc;
@@ -294,39 +310,43 @@ body {
   position: relative;
   margin-right: 20px;
   transition: 0.3s;
-}
+} */
 
 .slider {
   position: relative;
   width: 40px;
   height: 20px;
-  background-color: #f9fafb; /* світлий фон */
+  background-color: #f9fafb;
   border-radius: 34px;
   transition: 0.3s;
   border: 1px solid #e5e7eb;
 }
 
-/* круглий повзунок */
+/* повзунок */
 .slider::before {
   content: "";
   position: absolute;
   width: 16px;
   height: 16px;
   left: 2px;
-  bottom: 2px;
+  top: 50%;
+  transform: translateY(-50%); /* завжди по центру */
   border-radius: 50%;
-  background-color: #7b5cff; /* фіолетовий */
-  border: 1px solid #e5e7eb;
+  background-color: #7b5cff;
   transition: 0.3s;
 }
 
-/* при включенні toggle */
-.toggle input:checked + .slider::before {
-  transform: translateX(20px);
+/* коли включено */
+.toggle input:checked + .slider {
+  background-color: #f9fafb; /* фон треку */
 }
 
-.toggle input:checked + .slider {
-  background-color: #f9fafb; /* фон залишається світлим */
+.toggle input:checked + .slider::before {
+  transform: translate(20px, -50%); /* вправо + по центру */
+}
+
+.right-settings-label-one {
+  margin-bottom: 16px;
 }
 
 .label-text {
@@ -342,7 +362,7 @@ body {
 }
 
 /* Input group для пароля */
-.input-group {
+/* .input-group {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
@@ -350,6 +370,32 @@ body {
   border-radius: 5px;
   padding: 5px 10px;
   background-color: #fff;
+} */
+
+.input-group {
+  position: relative;
+  width: 400px;
+  margin-bottom: 16px;
+}
+
+.input-group svg {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: #9ca3af; /* сірий для іконки */
+  pointer-events: none; /* щоб не заважала клікам */
+}
+
+.input-group input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0 16px 0 44px; /* відступ зліва під іконку */
+  background-color: #f9fafb;
+  font-size: 14px;
+  color: #1f2937;
 }
 
 .input-icon {
@@ -357,12 +403,12 @@ body {
   fill: #666;
 }
 
-.input-group input {
+/* .input-group input {
   border: none;
   outline: none;
   flex: 1;
   padding: 5px;
-}
+} */
 
 /* Upload Box */
 .upload-box {
