@@ -121,163 +121,171 @@
               language settings
             </p>
           </div>
-          <!-- Ліва колонка -->
-          <div class="settings_container">
-            <div class="left_settings">
-              <h3 class="left_settings_h">General</h3>
-              <div class="form_group_all">
-                <div class="form_group_zone_one_all">
-                  <div class="form_group_zone_one">
-                    <label class="left_settings_label">Language</label>
-                    <select class="form_group_zone">
-                      <option>English (Default)</option>
-                      <option>Spanish</option>
-                      <option>French</option>
-                    </select>
+          <div class="left_right">
+            <!-- Ліва колонка -->
+            <div class="settings_container">
+              <div class="left_settings">
+                <h3 class="left_settings_h">General</h3>
+                <div class="form_group_all">
+                  <div class="form_group_zone_one_all">
+                    <div class="form_group_zone_one">
+                      <label class="left_settings_label">Language</label>
+                      <select class="form_group_zone">
+                        <option>English (Default)</option>
+                        <option>Spanish</option>
+                        <option>French</option>
+                      </select>
+                    </div>
+                    <div class="form_group_zone_one">
+                      <label class="left_settings_label">Timezone</label>
+                      <select class="form_group_zone">
+                        <option>United States</option>
+                        <option>Europe</option>
+                        <option>Asia</option>
+                      </select>
+                    </div>
                   </div>
-                  <div class="form_group_zone_one">
-                    <label class="left_settings_label">Timezone</label>
-                    <select class="form_group_zone">
-                      <option>United States</option>
-                      <option>Europe</option>
-                      <option>Asia</option>
-                    </select>
+                  <div class="form_inline">
+                    <div class="form_group">
+                      <div class="form_group_button_svg">
+                        <label
+                          class="left_settings_label left_settings_label_one"
+                          >Date Format</label
+                        >
+                        <button class="form_group_button">
+                          <svg class="form_group_svg" width="20" height="20">
+                            <use href="./images/icons.svg#icon-Info-icon"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <select class="form_group_select">
+                        <option>MM/DD/YYYY</option>
+                        <option>DD/MM/YYYY</option>
+                      </select>
+                    </div>
+                    <div class="form_group">
+                      <div class="form_group_button_svg">
+                        <label class="left_settings_label">Date Format</label>
+                        <button class="form_group_button">
+                          <svg class="form_group_svg" width="20" height="20">
+                            <use href="./images/icons.svg#icon-Info-icon"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <select class="form_group_select">
+                        <option>12 Hours</option>
+                        <option>24 Hours</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
-                <div class="form_inline">
-                  <div class="form_group">
-                    <div class="form_group_button_svg">
-                      <label class="left_settings_label left_settings_label_one"
-                        >Date Format</label
-                      >
-                      <button class="form_group_button">
-                        <svg class="form_group_svg" width="20" height="20">
-                          <use href="./images/icons.svg#icon-Info-icon"></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <select class="form_group_select">
-                      <option>MM/DD/YYYY</option>
-                      <option>DD/MM/YYYY</option>
-                    </select>
+              </div>
+            </div>
+            <div class="notification_password">
+              <!-- Notification -->
+
+              <div class="notification_settings">
+                <h3 class="section_title">
+                  <span class="highlight">Notification</span>
+                </h3>
+                <div class="toggle_div_all">
+                  <div class="toggle_div">
+                    <label class="toggle">
+                      <input type="checkbox" checked />
+                      <span class="slider"></span>
+                      <span class="label_text">Timer</span>
+                    </label>
                   </div>
-                  <div class="form_group">
-                    <div class="form_group_button_svg">
-                      <label class="left_settings_label">Date Format</label>
-                      <button class="form_group_button">
-                        <svg class="form_group_svg" width="20" height="20">
-                          <use href="./images/icons.svg#icon-Info-icon"></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <select class="form_group_select">
-                      <option>12 Hours</option>
-                      <option>24 Hours</option>
-                    </select>
+                  <div class="toggle_div">
+                    <label class="toggle">
+                      <input type="checkbox" />
+                      <span class="slider"></span>
+                      <span class="label_text">Task Update</span>
+                    </label>
+                  </div>
+                  <div class="toggle_div">
+                    <label class="toggle">
+                      <input type="checkbox" checked />
+                      <span class="slider"></span>
+                      <span class="label_text">Task Deadline</span>
+                    </label>
                   </div>
                 </div>
               </div>
+              <!-- Notification кінець -->
+
+              <!-- Password -->
+              <div class="password_settings">
+                <h3 class="section_title section_title_password">Password</h3>
+                <label class="left_settings_label right_settings_label_one"
+                  >Old password</label
+                >
+                <div class="input_group">
+                  <svg class="input_icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-Vector-5"></use>
+                  </svg>
+                  <input
+                    class="right_input"
+                    type="password"
+                    placeholder="Password"
+                  />
+                </div>
+                <label class="left_settings_label right_settings_label_one"
+                  >New password</label
+                >
+                <div class="input_group">
+                  <svg class="input_icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-Vector-5"></use>
+                  </svg>
+                  <input
+                    class="right_input"
+                    type="password"
+                    placeholder="New password"
+                  />
+                </div>
+              </div>
+              <!-- Password кінець -->
             </div>
           </div>
-          <!-- Notification -->
-
-          <div class="notification_settings">
-            <h3 class="section_title">
-              <span class="highlight">Notification</span>
-            </h3>
-            <div class="toggle_div-all">
-              <div class="toggle_div">
-                <label class="toggle">
-                  <input type="checkbox" checked />
-                  <span class="slider"></span>
-                  <span class="label_text">Timer</span>
-                </label>
-              </div>
-              <div class="toggle_div">
-                <label class="toggle">
-                  <input type="checkbox" />
-                  <span class="slider"></span>
-                  <span class="label_text">Task Update</span>
-                </label>
-              </div>
-              <div class="toggle_div">
-                <label class="toggle">
-                  <input type="checkbox" checked />
-                  <span class="slider"></span>
-                  <span class="label_text">Task Deadline</span>
-                </label>
-              </div>
-            </div>
-          </div>
-          <!-- Notification кінець -->
-
-          <!-- Password -->
-          <div class="password_settings">
-            <h3 class="section_title section_title_password">Password</h3>
-            <label class="left_settings_label right_settings_label_one"
-              >Old password</label
-            >
-            <div class="input_group">
-              <svg class="input_icon" width="16" height="16">
-                <use href="./images/icons.svg#icon-Vector-5"></use>
-              </svg>
-              <input
-                class="right-input"
-                type="password"
-                placeholder="Password"
-              />
-            </div>
-            <label class="left_settings_label right_settings_label_one"
-              >New password</label
-            >
-            <div class="input_group">
-              <svg class="input_icon" width="16" height="16">
-                <use href="./images/icons.svg#icon-Vector-5"></use>
-              </svg>
-              <input
-                class="right_input"
-                type="password"
-                placeholder="New password"
-              />
-            </div>
-          </div>
-          <!-- Password кінець -->
-
           <!-- Personal Info на всю ширину -->
           <div class="personal_info">
             <h3 class="personal_info-h">Personal info</h3>
-            <div class="form_group">
-              <label class="personal_info_label">First name</label>
-              <input class="personal_info_input" type="text" value="Oliva" />
+            <div class="form_group_all-one">
+              <div class="form_group">
+                <label class="personal_info_label">First name</label>
+                <input class="personal_info_input" type="text" value="Oliva" />
+              </div>
+              <div class="form_group">
+                <label class="personal_info_label">Email</label>
+                <input
+                  class="personal_info_input"
+                  type="email"
+                  value="olivia@untitledui.com"
+                />
+              </div>
             </div>
-            <div class="form_group">
-              <label class="personal_info_label">Email</label>
-              <input
-                class="personal_info_input"
-                type="email"
-                value="olivia@untitledui.com"
-              />
-            </div>
-            <!-- іконка -->
-            <div class="upload_icon-footer">
-              <img
-                class="upload_icon upload_icon_footer"
-                src="./images/Avatar.png"
-                srcset="./images/Avatar.png 1x, ./images/Avatar2x.png 2x"
-                alt="Upload"
-              />
-            </div>
-            <!-- іконка кінець -->
-            <div class="form_group upload_box">
-              <button class="topbar-button_footer">
-                <svg class="social-icon-menu_footer" width="25" height="25">
-                  <use href="./images/icons.svg#icon-upload-cloud"></use>
-                </svg>
-              </button>
-              <p class="personal_info_p_box">
-                <span class="personal_info-p_strong">Click to upload</span>
-                or drag and drop SVG, PNG, JPG or GIF (max. 800x400px)
-              </p>
+            <div class="img_and_upload">
+              <!-- іконка -->
+              <div class="upload_icon-footer">
+                <img
+                  class="upload_icon upload_icon_footer"
+                  src="./images/Avatar.png"
+                  srcset="./images/Avatar.png 1x, ./images/Avatar2x.png 2x"
+                  alt="Upload"
+                />
+              </div>
+              <!-- іконка кінець -->
+              <div class="form_group upload_box">
+                <button class="topbar-button_footer">
+                  <svg class="social-icon-menu_footer" width="25" height="25">
+                    <use href="./images/icons.svg#icon-upload-cloud"></use>
+                  </svg>
+                </button>
+                <p class="personal_info_p_box">
+                  <span class="personal_info-p_strong">Click to upload</span>
+                  or drag and drop SVG, PNG, JPG or GIF (max. 800x400px)
+                </p>
+              </div>
             </div>
           </div>
           <!-- Personal Info на всю ширину кінець -->
