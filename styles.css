@@ -430,9 +430,9 @@ section {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  justify-content: center; /* вертикально по центру */
-  align-items: center; /* горизонтально по центру */
-  gap: 8px; /* відстань між іконкою і текстом */
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   transition: border-color 0.3s, background-color 0.3s;
 }
 
@@ -585,7 +585,7 @@ section {
     padding: 10px;
   }
 
-  .form_group_all-one {
+  .form_group_all_one {
     display: flex;
     flex-direction: row;
     gap: 24px;
@@ -618,5 +618,76 @@ section {
   .container {
     max-width: 1140px;
     padding: 0 32px;
+  }
+
+  .settings_h {
+    font-weight: 500;
+  }
+
+  .settings_p {
+    font-size: 16px;
+  }
+
+  .form_group_zone {
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: -0.02em;
+    color: #717680;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  .left_right {
+    justify-content: center;
+    gap: 24px;
+    min-width: 1140px;
+  }
+
+  .left_settings {
+    width: 530px;
+    /* padding: 15px; */
+    padding: 0px;
+  }
+
+  .notification_password {
+    width: 530px;
+    padding: 15px;
+    padding: 0px;
+  }
+
+  .input_group input {
+    width: 100%;
+  }
+
+  .right_input {
+    width: 400px;
+  }
+
+  .form_inline {
+    justify-content: flex-start;
+  }
+
+  .form_group_all_one {
+    min-width: 1140px;
+    padding: 15px;
+  }
+
+  .personal_info-h {
+    padding: 15px;
+  }
+
+  .settings_container {
+    padding: 15px;
+  }
+
+  .personal_info_input {
+    min-width: 514px;
+  }
+
+  .upload_icon-footer {
+    padding: 0px;
+  }
+
+  .form_group.upload_box {
+    width: 80%;
   }
 }
