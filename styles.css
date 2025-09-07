@@ -125,10 +125,29 @@ section {
 }
 
 .settings_h {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px; /* місце для стрілки */
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
   font-weight: 600;
   font-size: 29px;
   color: #1f2937;
   font-family: "Nunito", sans-serif;
+}
+
+.settings_h::before {
+  content: "<"; /* можна замінити на "←" для красивішої стрілки */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  color: #65676a;
 }
 
 .settings_p {
@@ -548,7 +567,9 @@ section {
     display: flex;
     justify-content: flex-start;
     gap: 10px;
-    width: 720px;
+    min-width: 720px;
+    margin-right: auto;
+    /* padding: 15px; */
   }
 
   .left_right {
@@ -643,13 +664,13 @@ section {
   }
 
   .left_settings {
-    width: 530px;
+    width: 570px;
     /* padding: 15px; */
     padding: 0px;
   }
 
   .notification_password {
-    width: 530px;
+    width: 570px;
     padding: 15px;
     padding: 0px;
   }
@@ -676,7 +697,8 @@ section {
   }
 
   .settings_container {
-    padding: 15px;
+    width: 570px;
+    /* padding: 15px; */
   }
 
   .personal_info_input {
@@ -689,5 +711,13 @@ section {
 
   .form_group.upload_box {
     width: 80%;
+  }
+
+  .settings_h {
+    padding-left: 0; /* прибираємо відступ */
+  }
+
+  .settings_h::before {
+    content: none;
   }
 }
