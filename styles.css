@@ -79,7 +79,7 @@ section {
   fill: #5b4bdb;
 }
 
-.topbar-button {
+.topbar_button {
   border-radius: 50px;
   width: 34px;
   height: 34px;
@@ -136,6 +136,7 @@ section {
   font-size: 29px;
   color: #1f2937;
   font-family: "Nunito", sans-serif;
+  width: 120px;
 }
 
 .settings_h::before {
@@ -273,6 +274,7 @@ section {
   font-family: "Inter", sans-serif;
   text-align: left;
   margin-bottom: 38px;
+  margin-top: 20px;
 }
 
 .label_text {
@@ -363,6 +365,7 @@ section {
   color: #1f2937;
   font-family: "Inter", sans-serif;
   text-align: left;
+  width: 120px;
 }
 
 .password_settings {
@@ -412,7 +415,7 @@ section {
 .personal_info-h {
   font-weight: 500;
   font-size: 22px;
-  text-align: center;
+  text-align: left;
   color: #1f2937;
   font-family: "Inter", sans-serif;
 }
@@ -499,7 +502,7 @@ section {
   height: 64px;
 }
 
-.topbar-button_footer {
+.topbar_button_footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -549,6 +552,34 @@ section {
 }
 /* кнопки кінець */
 
+/* Базовий стиль для всіх потрібних заголовків */
+.settings_h,
+.section_title,
+.section_title_password,
+.personal_info-h {
+  position: relative;
+  display: inline-block; /* щоб underline був під словом */
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  color: #1f2937;
+  text-decoration: none;
+}
+
+/* Псевдоелемент для синьої "стрілки" */
+.settings_h::after,
+.section_title::after,
+.section_title_password::after,
+.personal_info-h::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* відстань під словом */
+  width: 100%;
+  height: 3px;
+  background: #3b82f6; /* синій колір (tailwind blue-500) */
+  border-radius: 2px;
+}
+
 /* ---------- Планшет ---------- */
 @media (min-width: 768px) {
   .container {
@@ -596,6 +627,7 @@ section {
     justify-content: center;
     flex-direction: row;
     gap: 5px;
+    /* margin-bottom: 20px; */
   }
 
   .left_settings {
@@ -632,6 +664,10 @@ section {
   .personal_info-h {
     text-align: left;
   }
+
+  .section_title {
+    margin-top: 0px;
+  }
 }
 
 /* ---------- Десктоп ---------- */
@@ -655,6 +691,7 @@ section {
     letter-spacing: -0.02em;
     color: #717680;
     font-family: "Plus Jakarta Sans", sans-serif;
+    /* margin-bottom: 20px; */
   }
 
   .left_right {
@@ -689,12 +726,12 @@ section {
 
   .form_group_all_one {
     min-width: 1140px;
-    padding: 15px;
+    /* padding: 15px; */
   }
 
-  .personal_info-h {
+  /* .personal_info-h {
     padding: 15px;
-  }
+  } */
 
   .settings_container {
     width: 570px;
@@ -719,5 +756,9 @@ section {
 
   .settings_h::before {
     content: none;
+  }
+
+  .topbar_button_2 {
+    display: none;
   }
 }
